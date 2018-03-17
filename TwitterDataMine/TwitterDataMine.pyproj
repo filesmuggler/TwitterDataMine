@@ -24,6 +24,9 @@
     <Compile Include="displayUserData.py" />
     <Compile Include="importKeys.py" />
     <Compile Include="preprocess.py" />
+    <Compile Include="preprocessKeys.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="printFromJson.py" />
     <Compile Include="TwitterDataMine.py" />
   </ItemGroup>
