@@ -21,6 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="displayUserData.py" />
+    <Compile Include="importKeys.py" />
+    <Compile Include="preprocess.py" />
+    <Compile Include="printFromJson.py" />
     <Compile Include="TwitterDataMine.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
