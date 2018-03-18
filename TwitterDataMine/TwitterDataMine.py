@@ -8,6 +8,7 @@ from tweepy import OAuthHandler
 from displayUserData import displayUserData
 from printFromJson import printFromJson
 from configureAPI import configureAPI
+from collectTweets import collectTweets
 
 def main():
     
@@ -17,11 +18,7 @@ def main():
     #targeting user
     target = 'chris_stezala09'
     number = 5
-    print("Getting data for " + target)
-    # watching target timeline
-    for twt in tweepy.Cursor(api.user_timeline, id=target).items(number):
-       printFromJson(twt._json)
-    return twt
+    collectTweets(api, target, number)
     
     
 if __name__=="__main__":
