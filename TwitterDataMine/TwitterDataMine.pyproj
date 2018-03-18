@@ -31,6 +31,9 @@
     <Compile Include="configureAPI.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ConfigureStep.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="displayUserData.py" />
     <Compile Include="firstRun.py">
       <SubType>Code</SubType>
