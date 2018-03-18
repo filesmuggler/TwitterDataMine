@@ -1,4 +1,6 @@
 import os
+import wx
+from ConfigureStep import ConfigureStep
 
 def firstRun(path):
     #check if file with keys exists
@@ -6,6 +8,10 @@ def firstRun(path):
     if(os.path.isfile(path)):
         return True
     else:
+        app = wx.App()
+        frm = ConfigureStep(None,title="SimpleTwitterMineData",size=(480, 320)).Show()
+        app.MainLoop()
+        # connect window with path and passing keys
         print("File does not exist. Please enter Twitter keys.")
         ck = input("consumer key> ")
         cs = input("consumer secret> ")

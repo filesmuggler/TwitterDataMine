@@ -47,3 +47,7 @@ class ConfigureStep(wx.Frame):
 
     def OnAbout(self, event):
         wx.MessageBox("Application for Filtering data from Twitter\nVersion 0.0.1 ","About",wx.OK|wx.ICON_INFORMATION)
+
+    
+
+        
