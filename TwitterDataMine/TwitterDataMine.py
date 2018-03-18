@@ -18,7 +18,7 @@ def main():
     #configuring Twitter API
     api = configureAPI()
     
-    collectTweets(api,"elonmusk",1)
+    collectTweets(api,"elonmusk",5)
     
     
 if __name__=="__main__":
