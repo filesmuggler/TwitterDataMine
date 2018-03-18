@@ -2,6 +2,7 @@ import os
 
 def firstRun(path):
     #check if file with keys exists
+    #if not create one and ask for keys
     if(os.path.isfile(path)):
         return True
     else:
@@ -17,7 +18,7 @@ def firstRun(path):
         f.write(at+"\n")
         f.write(ats+"\n")
 
-    #if not create one and ask for keys
+    
     
 
    
