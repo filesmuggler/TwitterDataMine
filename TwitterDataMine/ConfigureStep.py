@@ -1,4 +1,5 @@
 import wx
+import os
 
 class ConfigureStep(wx.Frame):
 
@@ -71,6 +72,11 @@ class ConfigureStep(wx.Frame):
         f.write(self.cs.GetValue()+"\n")
         f.write(self.at.GetValue()+"\n")
         f.write(self.ats.GetValue()+"\n")
+
+        path_c = os.getcwd() + "\\config_file.txt"
+        g = open(path_c,'w')
+        g.write(path_f)
+
         self.Close(True)
 
    # def GetData(parent=None, message='', default_value=''):

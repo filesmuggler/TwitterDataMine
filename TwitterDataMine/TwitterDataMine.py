@@ -18,9 +18,7 @@ def main():
     #configuring Twitter API
     api = configureAPI()
     
-    app = wx.App()
-    frm = ConfigureStep(None,title="SimpleTwitterMineData",size=(480, 320)).Show()
-    app.MainLoop()
+    collectTweets(api,"elonmusk",1)
     
     
 if __name__=="__main__":

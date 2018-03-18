@@ -8,19 +8,11 @@ def firstRun(path):
     if(os.path.isfile(path)):
         return True
     else:
-        
         # connect window with path and passing keys
-        print("File does not exist. Please enter Twitter keys.")
-        ck = input("consumer key> ")
-        cs = input("consumer secret> ")
-        at = input("access token> ")
-        ats = input("access secret> ")
+        app = wx.App()
+        frm = ConfigureStep(None,title="SimpleTwitterMineData",size=(480, 320)).Show()
+        app.MainLoop()
 
-        f = open(path,'w')
-        f.write(ck+"\n")
-        f.write(cs+"\n")
-        f.write(at+"\n")
-        f.write(ats+"\n")
 
     
     
