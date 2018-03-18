@@ -1,5 +1,7 @@
 import json
 import sys
+import wx
+from DialogBox import DialogBox
 
 def importKeys(path_p):
     # import keys from file specified in path
@@ -19,7 +21,9 @@ def importKeys(path_p):
                 keys.append(line)
         return keys
     except IOError:
-        print("Oops! Delete config.txt in current directory and restart.")
-        ans = input("<OK>")
-        sys.exit()
+        # not elegant of signalising the error
+        dlg = wx.App()
+        DialogBox()
+        dlg.MainLoop()
+        
     

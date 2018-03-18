@@ -34,6 +34,9 @@
     <Compile Include="ConfigureStep.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DialogBox.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="displayUserData.py" />
     <Compile Include="firstRun.py">
       <SubType>Code</SubType>
