@@ -1,4 +1,4 @@
-from .printFromJson import printFromJson
+from printFromJson import printFromJson
 from tweepy import OAuthHandler
 
 import tweepy
