@@ -22,14 +22,6 @@ def main():
     keys = []
     keys = importKeys(path)
     
-    print(sys.getfilesystemencoding())
-
-    print(keys[0])
-    print(keys[1])
-    print(keys[2])
-    print(keys[3])
-
-
     consumer_key = keys[0]
     consumer_secret = keys[1]
     access_token = keys[2]
@@ -50,7 +42,5 @@ def main():
     return twt
     
     
-
-
 if __name__=="__main__":
     main()
