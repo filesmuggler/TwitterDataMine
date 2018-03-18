@@ -22,10 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BasicFrame.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="collectTweets.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="configureAPI.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigureStep.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="displayUserData.py" />

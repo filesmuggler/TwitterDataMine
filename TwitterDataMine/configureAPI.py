@@ -1,4 +1,5 @@
 import tweepy
+import os
 
 from tweepy import OAuthHandler
 from firstRun import firstRun
@@ -6,7 +7,7 @@ from importKeys import importKeys
 
 def configureAPI():
     # get keys
-    path = "C:\\Users\\krzst\\keys.txt"
+    path =  os.getcwd() + "\\config_file.txt"
     firstRun(path)
 
     keys = []
