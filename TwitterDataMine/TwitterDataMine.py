@@ -19,7 +19,7 @@ def main():
     #configuring Twitter API
     api = configureAPI()
     app = wx.App()
-    frm = MainWindow(None,title="SimpleTwitterMineData",size=(800, 600)).Show()
+    frm = MainWindow(None,-1,title="SimpleTwitterMineData").Show()
     app.MainLoop()
     #collectTweets(api,"elonmusk",5)
     

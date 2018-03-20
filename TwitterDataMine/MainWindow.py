@@ -1,37 +1,28 @@
 import wx
 
 class MainWindow(wx.Frame):
-    def __init__(self, *args, **kw):
-        super(MainWindow,self).__init__(*args,**kw)
-       
-        #pnl = wx.Panel(self)
-        #st = wx.StaticText(pnl, label="Welcome!", pos=(10,10))
-        #font = st.GetFont()
-        #font.PointSize += 10
-        #font = font.Bold()
-        #st.SetFont(font)
-        #self.hline = wx.StaticLine(pnl, 1, (20,60), (740,3), style=wx.LI_HORIZONTAL)
+  
+    def __init__(self, parent,ID, title):
+        wx.Frame.__init__(self, parent, ID, title, size=(300, 250))
 
-        welcomePanel = wx.Panel(self,1,style=wx.BORDER_NONE)
-        welcomePanel.SetBackgroundColour(wx.Colour(0,132,180,0))
-        st = wx.StaticText(welcomePanel, label="Welcome!", pos=(10,10))
-        font = st.GetFont()
-        font.PointSize += 10
-        font = font.Bold()
-        st.SetFont(font)
-        st.SetForegroundColour(wx.Colour(255,255,255,255))
+        panel1 = wx.Panel(self,-1, style=wx.SUNKEN_BORDER)
+        panel2 = wx.Panel(self,-1, style=wx.SUNKEN_BORDER)
+        panel3 = wx.Panel(self,-1, style=wx.SUNKEN_BORDER)
 
-        self.hline = wx.StaticLine(welcomePanel, 1, (20,60), (740,3), style=wx.LI_HORIZONTAL)
-        self.hline.SetForegroundColour(wx.Colour(192,222,237,255))
+        panel1.SetBackgroundColour("BLUE")
+        panel2.SetBackgroundColour("RED")
+        panel3.SetBackgroundColour("GREEN")
 
-        workingPanel = wx.Panel(self,1,style=wx.BORDER_NONE)
-        workingPanel.SetBackgroundColour(wx.Colour(255,255,255,0))
+        boxh = wx.BoxSizer(wx.HORIZONTAL)
+        boxh.Add(panel2,1,wx.EXPAND)
+        boxh.Add(panel3,1,wx.EXPAND)
 
-        self.box = wx.BoxSizer(wx.VERTICAL)
-        self.box.Add(welcomePanel,0.5,wx.EXPAND)
-        self.box.Add(self.hline,0.2,wx.EXPAND)
-        self.box.Add(workingPanel,3,wx.EXPAND)
-        
+
+        box = wx.BoxSizer(wx.VERTICAL)
+        box.Add(panel1, 1, wx.EXPAND)
+        box.Add(boxh, 5, wx.EXPAND)
+
         self.SetAutoLayout(True)
-        self.SetSizer(self.box)
+        self.SetSizer(box)
         self.Layout()
+
