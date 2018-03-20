@@ -34,11 +34,17 @@
     <Compile Include="ConfigureStep.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DialogBox.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="displayUserData.py" />
     <Compile Include="firstRun.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="importKeys.py" />
+    <Compile Include="MainWindow.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="preprocess.py" />
     <Compile Include="printFromJson.py" />
     <Compile Include="TwitterDataMine.py" />

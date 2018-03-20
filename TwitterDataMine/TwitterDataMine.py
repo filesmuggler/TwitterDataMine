@@ -11,14 +11,17 @@ from printFromJson import printFromJson
 from configureAPI import configureAPI
 from collectTweets import collectTweets
 from ConfigureStep import ConfigureStep
+from MainWindow import MainWindow
 
 
 def main():
     
     #configuring Twitter API
     api = configureAPI()
-    
-    collectTweets(api,"elonmusk",1)
+    app = wx.App()
+    frm = MainWindow(None,-1,title="SimpleTwitterMineData").Show()
+    app.MainLoop()
+    #collectTweets(api,"elonmusk",5)
     
     
 if __name__=="__main__":
