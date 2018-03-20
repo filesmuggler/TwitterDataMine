@@ -15,7 +15,7 @@ class MainWindow(wx.Frame):
 
         welcomeText = wx.StaticText(panel1,label="Welcome!", style=wx.ALIGN_CENTRE)
         font = welcomeText.GetFont()
-        font.PointSize += 10
+        font.PointSize += 20
         font = font.Bold()
         welcomeText.SetFont(font)
         welcomeText.SetForegroundColour("WHITE")
