@@ -22,13 +22,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Analyzer.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="BasicFrame.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="collectTweets.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="configureAPI.py">
+    <Compile Include="Configurator.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ConfigureStep.py">
@@ -37,16 +37,9 @@
     <Compile Include="DialogBox.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="displayUserData.py" />
-    <Compile Include="firstRun.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="importKeys.py" />
     <Compile Include="MainWindow.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="preprocess.py" />
-    <Compile Include="printFromJson.py" />
     <Compile Include="TwitterDataMine.py" />
   </ItemGroup>
   <ItemGroup>

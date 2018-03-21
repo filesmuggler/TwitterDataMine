@@ -25,17 +25,21 @@ class MainWindow(wx.Frame):
         panel1.SetSizerAndFit(welcomePanelSizer)
         panel1.Layout()
 
+        target_label = wx.StaticText(panel2, label="Target", pos=(10,10))
+        target_name = wx.TextCtrl(panel2, size=(140, -1),pos=(10,30))
 
-        boxh = wx.BoxSizer(wx.HORIZONTAL)
-        boxh.Add(panel2,1,wx.EXPAND)
-        boxh.Add(panel3,3,wx.EXPAND)
+        number_label = wx.StaticText(panel2, label="Number of Samples", pos=(10,65))
+        number_value = wx.TextCtrl(panel2, size=(20, -1),pos=(130,60))
 
+
+        hor__bot_panel = wx.BoxSizer(wx.HORIZONTAL)
+        hor__bot_panel.Add(panel2,1,wx.EXPAND)
+        hor__bot_panel.Add(panel3,3,wx.EXPAND)
 
         box = wx.BoxSizer(wx.VERTICAL)
         box.Add(panel1, 1, wx.EXPAND)
-        box.Add(boxh, 6, wx.EXPAND)
+        box.Add(hor__bot_panel, 6, wx.EXPAND)
 
         self.SetAutoLayout(True)
         self.SetSizer(box)
         self.Layout()
-
