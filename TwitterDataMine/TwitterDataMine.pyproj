@@ -25,9 +25,6 @@
     <Compile Include="Analyzer.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BasicFrame.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Configurator.py">
       <SubType>Code</SubType>
     </Compile>
