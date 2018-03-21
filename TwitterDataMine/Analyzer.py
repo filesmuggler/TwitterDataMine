@@ -4,7 +4,6 @@ import json
 import re
 from tweepy import OAuthHandler
 
-
 class Analyzer():
     __slots__=['TwitterApi']
     # emoticons regular expressions
@@ -14,7 +13,6 @@ class Analyzer():
             [oO\-]? # Nose (optional)
             [D\)\]\(\]/\\OpP] # Mouth
         )"""
- 
 
     # other features regular expressions
     __regex_str = [
@@ -93,8 +91,6 @@ class Analyzer():
                 tweet = json.loads(line)
                 tokens = self.__preprocess(tweet[term])
                 print(tokens)
-
-
 
     def mostFrequent(number=10, save=False):
         return True

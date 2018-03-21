@@ -6,11 +6,13 @@ class ConfigureStep(wx.Frame):
     def __init__(self, *args, **kw):
         super(ConfigureStep,self).__init__(*args,**kw)
         pnl = wx.Panel(self)
+        pnl.SetBackgroundColour(wx.Colour(29, 202, 255, 255))
         st = wx.StaticText(pnl,label="Configure Step",pos=(25,20))
         font = st.GetFont()
         font.PointSize += 10
         font = font.Bold()
         st.SetFont(font)
+        st.SetForegroundColour("WHITE")
 
 
         self.makeMenuBar()
@@ -20,18 +22,23 @@ class ConfigureStep(wx.Frame):
 
         
         self.path_label = wx.StaticText(pnl, label="Path to local key store:",pos=(25,70))
+        self.path_label.SetForegroundColour("WHITE")
         self.path = wx.TextCtrl(pnl, size=(140, -1),pos=(150,70))
 
         self.ck_label = wx.StaticText(pnl, label="Customer key:",pos=(25,100))
+        self.ck_label.SetForegroundColour("WHITE")
         self.ck = wx.TextCtrl(pnl, size=(140, -1),pos=(150,100))
 
         self.cs_label = wx.StaticText(pnl, label="Customer secret:",pos=(25,130))
+        self.cs_label.SetForegroundColour("WHITE")
         self.cs = wx.TextCtrl(pnl, size=(140, -1),pos=(150,130))
 
         self.at_label = wx.StaticText(pnl, label="Access token:",pos=(25,160))
+        self.at_label.SetForegroundColour("WHITE")
         self.at = wx.TextCtrl(pnl, size=(140, -1),pos=(150,160))
 
         self.ats_label = wx.StaticText(pnl, label="Access secret:",pos=(25,190))
+        self.ats_label.SetForegroundColour("WHITE")
         self.ats = wx.TextCtrl(pnl, size=(140, -1),pos=(150,190))
 
         self.save_button = wx.Button(pnl, label="Save",pos=(320,190))

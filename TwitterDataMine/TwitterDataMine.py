@@ -16,17 +16,16 @@ from Configurator import Configurator
 def main():
     
     #configuring Twitter API
-    #api = configureAPI()
-
     configurator = Configurator()
     api = configurator.returnAPI()
 
-    #app = wx.App()
-    #frm = MainWindow(None,-1,title="SimpleTwitterMineData").Show()
-    #app.MainLoop()
-    #collectTweets(api,"elonmusk",5)
     analyzer = Analyzer(api)
     analyzer.filterByTerm("created_at","tweets.json")
+
+    #app = wx.App()
+    #frm = MainWindow(None,-1,title="SimpleTwitterMineData").Show()
+    #app.MainLoop
+    
 
 
     
