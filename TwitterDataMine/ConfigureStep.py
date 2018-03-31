@@ -14,7 +14,6 @@ class ConfigureStep(wx.Frame):
         st.SetFont(font)
         st.SetForegroundColour("WHITE")
 
-
         self.makeMenuBar()
 
         self.CreateStatusBar()

@@ -12,7 +12,6 @@ from MainWindow import MainWindow
 from Analyzer import Analyzer
 from Configurator import Configurator
 
-
 def main():
     
     #configuring Twitter API
@@ -20,7 +19,7 @@ def main():
     api = configurator.returnAPI()
 
     analyzer = Analyzer(api)
-    analyzer.filterByTerm("created_at","tweets.json")
+    analyzer.mostFrequent("elonmusk",100,"text","elonmusk10.json",True)
 
     #app = wx.App()
     #frm = MainWindow(None,-1,title="SimpleTwitterMineData").Show()

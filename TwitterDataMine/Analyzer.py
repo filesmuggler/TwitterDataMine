@@ -2,7 +2,12 @@ import tweepy
 import vincent
 import json
 import re
+import operator 
+import json
+import string
+from collections import Counter
 from tweepy import OAuthHandler
+from nltk.corpus import stopwords
 
 class Analyzer():
     __slots__=['TwitterApi']
@@ -92,8 +97,27 @@ class Analyzer():
                 tokens = self.__preprocess(tweet[term])
                 print(tokens)
 
-    def mostFrequent(number=10, save=False):
-        return True
+    def mostFrequent(self, target, number, term, filename, save=False):
+        final_data = ""
+        for twt in tweepy.Cursor(self.TwitterApi.user_timeline, id=target).items(number):
+            final_data = self.__process_to_string(twt._json, final_data)
+
+        self.__save_to_file(final_data,filename)
+
+        with open(filename,'r') as f:
+            count_all = Counter()
+            punctuation = list(string.punctuation)
+            stop = stopwords.words('english') + punctuation + ['rt', 'via', '…','’', '`']
+            
+
+            for line in f:
+                tweet = json.loads(line)
+                #terms_stop = [tm for tm in self.__preprocess(tweet[term]) if tm not in stop]
+                terms_ = [tm for tm in self.__preprocess(tweet[term]) if tm.startswith('@')]
+                count_all.update(terms_)
+            print(count_all.most_common(20))
+
+
 
     
 
